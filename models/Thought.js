@@ -4,10 +4,11 @@ const moment = require("moment");
 // Reaction (schema only)
 const reactionSchema = new Schema(
   {
-    reactionId: {
-      type: Schema.Types.ObjectId,
-      default: () => new Types.ObjectId(),
-    },
+    // reactionId: {
+    //   type: Schema.Types.ObjectId,
+    //   // default: () => new Types.ObjectId(),
+    //   auto: true,
+    // },
     reactionBody: {
       type: String,
       required: true,

@@ -5,6 +5,7 @@ module.exports = {
   getThoughts(req, res) {
     Thought.find()
       .then((thoughts) => {
+        console.log(thoughts[0].reactions);
         res.json(thoughts);
       })
       .catch((err) => {
@@ -60,8 +61,8 @@ module.exports = {
   // add reaction to user
   createReaction(req, res) {
     Thought.findOneAndUpdate(
-      { _id: req.params.reactionId },
-      { $addToSet: { reactions: req.params.reactionId } },
+      { _id: req.params.thoughtId },
+      { $addToSet: { reactions: req.body } },
       { runValidators: true, new: true }
     )
       .then((thought) =>
