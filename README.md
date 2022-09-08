@@ -12,6 +12,8 @@
 
 ## Description
 
+Walkthrough video: https://screencast-o-matic.com/watch/c3jDlfVThsP  
+
 An API that captures information on Users, their Thoughts and Reactions to those thoughts, stored via MongoDB
 
 ## Installation
